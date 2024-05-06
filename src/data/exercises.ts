@@ -180,4 +180,3 @@ const exerciseList = {
   };
   
   export default exerciseList;
-  
