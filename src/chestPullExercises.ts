@@ -30,7 +30,7 @@ function shuffleArray(arr: Exercise[]) {
 let div = document.getElementById("exercises");
 
 if (div) {
-  div.innerHTML = getRandomExercises("chest_push")
+  div.innerHTML = getRandomExercises("chest_pull")
     .map((exercise) => {
       return `<div class="card"><img src="${exercise.image}" alt="${exercise.name}" />
       <h1>${exercise.name}</h1><p>${exercise.description}</p></div>`;

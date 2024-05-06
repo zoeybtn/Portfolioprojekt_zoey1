@@ -15,23 +15,17 @@ interface ExerciseList {
 
 const typedExercisesList: ExerciseList = exercisesList;
 
-const getRandomExercises = (exercise: "leg" | "chest_pull" | "chest_push") => {
-  if (typedExercisesList[exercise].length < 6) {
-    return typedExercisesList[exercise];
-  }
-  const randomObjects = [];
-  const shuffledArray = typedExercisesList[exercise].slice();
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-  }
+const getRandomExercises = (exercise: "leg" | "chest_pull" | "chest_push") => shuffleArray(typedExercisesList[exercise]);
 
-  for (let i = 0; i < 6; i++) {
-    randomObjects.push(shuffledArray[i]);
-  }
-
-  return randomObjects;
-};
+function shuffleArray(arr: Exercise[]) {
+    for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+    }
+    return arr.slice(0,6);
+    }
 
 let div = document.getElementById("exercises");
 
