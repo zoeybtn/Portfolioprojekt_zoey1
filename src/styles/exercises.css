@@ -1,0 +1,13 @@
+.card {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 0 8px;
+    display: flex;
+  }
+  
+  img {
+    min-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    background-color: black;
+  }
