@@ -37,6 +37,7 @@ a:hover {
   background: #03cdfd;
   color: #fff;
   text-decoration: none;
+  font-size: 18px;
 }
 .button:hover {
   color: #eee;
