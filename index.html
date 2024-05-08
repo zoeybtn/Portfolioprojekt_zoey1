@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Clicking Sound When Click Button</Button></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -25,26 +26,48 @@
               <div class="text">
                 <h2>Upper body PULL</h2>
                 <button class="button" type="submit" id="chestPull">Generate 6 random exercises</button>
+                <script>
+                  // Funktion, um den Klick-Sound abzuspielen
+                  function playClickSound() {
+                      const audio = new Audio('public/click.wav');
+                      audio.play();
+                  }
+                  // Event Listener, um die Funktion beim Klicken auf den Button auszulösen
+                  document.getElementById('chestPull').addEventListener('click', playClickSound);
+                </script>
               </div>
             </li>
             <li>
               <img src="public/OberkörperPUSH.jpg" alt="Bild" />
               <div class="text">
                 <h2>Upper body PUSH</h2>
-                <button class="button" type="submit" id="chestPush">Generate 6 random exercises</button>
+                <button class="button" type="submit" id="chestPush" onclick="audio.play();">Generate 6 random exercises</button>
+                <script>
+                  function playClickSound() {
+                      const audio = new Audio('public/click.wav');
+                      audio.play();
+                  }
+                  document.getElementById('chestPush').addEventListener('click', playClickSound);
+                </script>
               </div>
             </li>
             <li>
               <img src="public/Beine.jpg" alt="Bild" />
               <div class="text">
                 <h2>Legs</h2>
-                <button class="button" type="submit" id="leg">Generate 6 random exercises</button>
+                <button class="button" type="submit" id="leg" onclick="audio.play();">Generate 6 random exercises</button>
+                <script>
+                  function playClickSound() {
+                      const audio = new Audio('public/click.wav');
+                      audio.play();
+                  }
+                  document.getElementById('leg').addEventListener('click', playClickSound);
+                </script>
               </div>
             </li>
           </ul>
         </div>
         <div id="result">
-
         </div>
       </div>
     </section>
