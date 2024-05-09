@@ -5,16 +5,19 @@ import {exerciseList} from './data/exercises.ts';
 
 chestPull.addEventListener('click', function (){
     const result = shuffleArray(exerciseList.chest_pull)
+    playClickSound();
     createDivResult(result);
 });
 
 chestPush.addEventListener('click', function (){
     const result = shuffleArray(exerciseList.chest_push)
+    playClickSound();
     createDivResult(result);
 });
 
 leg.addEventListener('click', function (){
     const result = shuffleArray(exerciseList.leg)
+    playClickSound();
     createDivResult(result);
 });
 
@@ -41,4 +44,9 @@ function createDivResult(results: Exercise[]) {
         div.classList.add("card");
         resultEl.appendChild(div);
     });
+}
+ // Funktion, um den Klick-Sound abzuspielen
+ function playClickSound() {
+    const audio = new Audio('public/click.wav');
+    audio.play();
 }
