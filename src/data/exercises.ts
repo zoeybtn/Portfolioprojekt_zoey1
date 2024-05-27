@@ -1,4 +1,5 @@
-export const exerciseList = {
+import { ExerciseList } from "../Interface";
+export const exerciseList: ExerciseList = {
   leg: [
     {
       name: "Squat",

@@ -4,7 +4,7 @@ export interface Exercise {
   description: string;
 }
 
-interface ExerciseList {
+export interface ExerciseList {
   leg: Exercise[];
   chest_push: Exercise[];
   chest_pull: Exercise[];
